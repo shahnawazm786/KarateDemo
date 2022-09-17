@@ -28,10 +28,20 @@ Feature: Post Example
     And print response
 
   #Background and Assertion with post request
-  Scenario: Post Data - Demo 3
+  Scenario: Post Data - Demo 4
     Given path '/users'
     And request {"name": "Mohammad","job": "teacher"}
     When method POST
     Then status 201
-    And match  {"name": "Mohammad","job": "teacher","id": "583","createdAt": "2022-09-17T03:40:32.355Z"}
+    And match response == {"name": "Mohammad","job": "teacher","id": "583","createdAt": "2022-09-17T03:40:32.355Z"}
     And print response
+
+      #Background and Assertion with post request igrone and string
+  Scenario: Post Data - Demo 5
+    Given path '/users'
+    And request {"name": "Mohammad","job": "teacher"}
+    When method POST
+    Then status 201
+    And match response == {"name": "Mohammad","job": "teacher","id": "583","createdAt": "2022-09-17T03:40:32.355Z"}
+    And print response
+    
