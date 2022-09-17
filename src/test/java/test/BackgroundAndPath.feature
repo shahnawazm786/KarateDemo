@@ -14,3 +14,8 @@ And print responseTime
 And print responseHeaders
 And print responseCookies
  
+ Scenario: Background Example with Param
+Given path '/users'
+And param Page = 2
+When method GET
+Then status 200
