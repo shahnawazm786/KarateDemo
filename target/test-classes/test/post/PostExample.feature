@@ -36,12 +36,16 @@ Feature: Post Example
     And match response == {"name": "Mohammad","job": "teacher","id": "583","createdAt": "2022-09-17T03:40:32.355Z"}
     And print response
 
-      #Background and Assertion with post request igrone and string
+  #Background and Assertion with post request igrone and string
   Scenario: Post Data - Demo 5
     Given path '/users'
     And request {"name": "Mohammad","job": "teacher"}
     When method POST
     Then status 201
-    And match response == {"name": "Mohammad","job": "teacher","id": "583","createdAt": "2022-09-17T03:40:32.355Z"}
+    And match response == {"name": "Mohammad","job": "teacher","id": "#string","createdAt": "#ignore"}
     And print response
+    
+    #Post with read response from file
+     Scenario: Post Data - Demo 5
+    Given path '/users'
     
