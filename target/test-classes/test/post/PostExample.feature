@@ -49,3 +49,8 @@ Feature: Post Example
   #Post with read response from file
   Scenario: Post Data - Demo 5
     Given path '/users'
+     And request {"name": "Mohammad","job": "teacher"}
+    When method POST
+    Then status 201
+    And match response == expectedOutput
+    And print response
