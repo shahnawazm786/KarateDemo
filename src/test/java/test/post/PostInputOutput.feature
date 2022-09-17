@@ -19,9 +19,9 @@ Feature: Post Example
     Given path '/users'
     And def projectPath = karate.properties['user.dir']
     And print projectPath
-    And def filePath = projectPath + '\src\test\java\data\request2.json'
+    And def filePath = projectPath + '\\src\\test\\java\\data\\request2.json'
     And print filePath
-    And def requestBody = read(filePath)
+    And def requestBody = filePath
     And request requestBody
     When method POST
     Then status 201
