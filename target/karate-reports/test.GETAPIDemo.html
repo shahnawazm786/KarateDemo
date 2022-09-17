@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <title>test.GETAPIDemo</title>  
+  </head>
+  <body>   
+    <div id="root-container">
+      <div id="leftnav">
+                
+        <div>
+  <div class="nav-logo">
+    <a href="karate-summary.html">
+      <img src="karate-logo.svg" alt="Karate"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">1</div>
+      <div id="nav-fail" class="bg-danger">0</div>
+    </div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>         
+  <div id="nav-date">
+    <div>2022-09-17 09:30:20 am</div>
+  </div>        
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item passed">
+            <a href="#[1:2]"><span>[1:2]</span> <span>GET API Response</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">test/GETAPIDemo.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">GET API Demo</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[1:2]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[1:2]</span>
+                <span class="scenario-name">GET API Response</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time passed">
+              <span>ms:</span>&nbsp;<span>193</span>
+            </div>
+          </div>
+          
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.3">
+      <div class="step-ref passed">3</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &#39;https://reqres.in/api/users?page=2&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref passed">4</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method GET</span>
+      </div>
+    </div>
+    <div class="time-cell passed">184</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.4">09:30:20.128 request:
+1 &gt; GET https://reqres.in/api/users?page=2
+1 &gt; Host: reqres.in
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/17.0.4)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+09:30:20.310 response time in milliseconds: 182
+1 &lt; 200
+1 &lt; Date: Sat, 17 Sep 2022 04:00:20 GMT
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; X-Powered-By: Express
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Etag: W/&quot;406-ut0vzoCuidvyMf8arZpMpJ6ZRDw&quot;
+1 &lt; Via: 1.1 vegur
+1 &lt; Cache-Control: max-age=14400
+1 &lt; CF-Cache-Status: HIT
+1 &lt; Age: 3272
+1 &lt; Report-To: {&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https:\/\/a.nel.cloudflare.com\/report\/v3?s=SvwtFxWcK9plrAYkoXGtEB38%2B1kQBKGgpZ%2BlRV4CesA8ng%2BDKw3JmFdjG0uMlKucH7S7wRns2fpmt0aOFjHB2O6YlZHj40fOSWolkgCyi2%2BKMfTCiIh110IXTw%3D%3D&quot;}],&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+1 &lt; NEL: {&quot;success_fraction&quot;:0,&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800}
+1 &lt; Vary: Accept-Encoding
+1 &lt; Server: cloudflare
+1 &lt; CF-RAY: 74beef2dd91c3212-BOM
+{&quot;page&quot;:2,&quot;per_page&quot;:6,&quot;total&quot;:12,&quot;total_pages&quot;:2,&quot;data&quot;:[{&quot;id&quot;:7,&quot;email&quot;:&quot;michael.lawson@reqres.in&quot;,&quot;first_name&quot;:&quot;Michael&quot;,&quot;last_name&quot;:&quot;Lawson&quot;,&quot;avatar&quot;:&quot;https://reqres.in/img/faces/7-image.jpg&quot;},{&quot;id&quot;:8,&quot;email&quot;:&quot;lindsay.ferguson@reqres.in&quot;,&quot;first_name&quot;:&quot;Lindsay&quot;,&quot;last_name&quot;:&quot;Ferguson&quot;,&quot;avatar&quot;:&quot;https://reqres.in/img/faces/8-image.jpg&quot;},{&quot;id&quot;:9,&quot;email&quot;:&quot;tobias.funke@reqres.in&quot;,&quot;first_name&quot;:&quot;Tobias&quot;,&quot;last_name&quot;:&quot;Funke&quot;,&quot;avatar&quot;:&quot;https://reqres.in/img/faces/9-image.jpg&quot;},{&quot;id&quot;:10,&quot;email&quot;:&quot;byron.fields@reqres.in&quot;,&quot;first_name&quot;:&quot;Byron&quot;,&quot;last_name&quot;:&quot;Fields&quot;,&quot;avatar&quot;:&quot;https://reqres.in/img/faces/10-image.jpg&quot;},{&quot;id&quot;:11,&quot;email&quot;:&quot;george.edwards@reqres.in&quot;,&quot;first_name&quot;:&quot;George&quot;,&quot;last_name&quot;:&quot;Edwards&quot;,&quot;avatar&quot;:&quot;https://reqres.in/img/faces/11-image.jpg&quot;},{&quot;id&quot;:12,&quot;email&quot;:&quot;rachel.howell@reqres.in&quot;,&quot;first_name&quot;:&quot;Rachel&quot;,&quot;last_name&quot;:&quot;Howell&quot;,&quot;avatar&quot;:&quot;https://reqres.in/img/faces/12-image.jpg&quot;}],&quot;support&quot;:{&quot;url&quot;:&quot;https://reqres.in/#support-heading&quot;,&quot;text&quot;:&quot;To keep ReqRes free, contributions towards server costs are appreciated!&quot;}}
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref passed">5</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.6">
+      <div class="step-ref passed">6</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print response</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.6">09:30:20.315 [print] {
+  &quot;page&quot;: 2,
+  &quot;per_page&quot;: 6,
+  &quot;total&quot;: 12,
+  &quot;total_pages&quot;: 2,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 7,
+      &quot;email&quot;: &quot;michael.lawson@reqres.in&quot;,
+      &quot;first_name&quot;: &quot;Michael&quot;,
+      &quot;last_name&quot;: &quot;Lawson&quot;,
+      &quot;avatar&quot;: &quot;https://reqres.in/img/faces/7-image.jpg&quot;
+    },
+    {
+      &quot;id&quot;: 8,
+      &quot;email&quot;: &quot;lindsay.ferguson@reqres.in&quot;,
+      &quot;first_name&quot;: &quot;Lindsay&quot;,
+      &quot;last_name&quot;: &quot;Ferguson&quot;,
+      &quot;avatar&quot;: &quot;https://reqres.in/img/faces/8-image.jpg&quot;
+    },
+    {
+      &quot;id&quot;: 9,
+      &quot;email&quot;: &quot;tobias.funke@reqres.in&quot;,
+      &quot;first_name&quot;: &quot;Tobias&quot;,
+      &quot;last_name&quot;: &quot;Funke&quot;,
+      &quot;avatar&quot;: &quot;https://reqres.in/img/faces/9-image.jpg&quot;
+    },
+    {
+      &quot;id&quot;: 10,
+      &quot;email&quot;: &quot;byron.fields@reqres.in&quot;,
+      &quot;first_name&quot;: &quot;Byron&quot;,
+      &quot;last_name&quot;: &quot;Fields&quot;,
+      &quot;avatar&quot;: &quot;https://reqres.in/img/faces/10-image.jpg&quot;
+    },
+    {
+      &quot;id&quot;: 11,
+      &quot;email&quot;: &quot;george.edwards@reqres.in&quot;,
+      &quot;first_name&quot;: &quot;George&quot;,
+      &quot;last_name&quot;: &quot;Edwards&quot;,
+      &quot;avatar&quot;: &quot;https://reqres.in/img/faces/11-image.jpg&quot;
+    },
+    {
+      &quot;id&quot;: 12,
+      &quot;email&quot;: &quot;rachel.howell@reqres.in&quot;,
+      &quot;first_name&quot;: &quot;Rachel&quot;,
+      &quot;last_name&quot;: &quot;Howell&quot;,
+      &quot;avatar&quot;: &quot;https://reqres.in/img/faces/12-image.jpg&quot;
+    }
+  ],
+  &quot;support&quot;: {
+    &quot;url&quot;: &quot;https://reqres.in/#support-heading&quot;,
+    &quot;text&quot;: &quot;To keep ReqRes free, contributions towards server costs are appreciated!&quot;
+  }
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.7">
+      <div class="step-ref passed">7</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print responseStatus</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.7">09:30:20.317 [print] 200 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.8">
+      <div class="step-ref passed">8</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print responseTime</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.8">09:30:20.319 [print] 182 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.9">
+      <div class="step-ref passed">9</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print responseHeaders</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.9">09:30:20.320 [print] {
+  &quot;Date&quot;: [
+    &quot;Sat, 17 Sep 2022 04:00:20 GMT&quot;
+  ],
+  &quot;Content-Type&quot;: [
+    &quot;application/json; charset=utf-8&quot;
+  ],
+  &quot;Transfer-Encoding&quot;: [
+    &quot;chunked&quot;
+  ],
+  &quot;Connection&quot;: [
+    &quot;keep-alive&quot;
+  ],
+  &quot;X-Powered-By&quot;: [
+    &quot;Express&quot;
+  ],
+  &quot;Access-Control-Allow-Origin&quot;: [
+    &quot;*&quot;
+  ],
+  &quot;Etag&quot;: [
+    &quot;W/\&quot;406-ut0vzoCuidvyMf8arZpMpJ6ZRDw\&quot;&quot;
+  ],
+  &quot;Via&quot;: [
+    &quot;1.1 vegur&quot;
+  ],
+  &quot;Cache-Control&quot;: [
+    &quot;max-age=14400&quot;
+  ],
+  &quot;CF-Cache-Status&quot;: [
+    &quot;HIT&quot;
+  ],
+  &quot;Age&quot;: [
+    &quot;3272&quot;
+  ],
+  &quot;Report-To&quot;: [
+    &quot;{\&quot;endpoints\&quot;:[{\&quot;url\&quot;:\&quot;https:\\/\\/a.nel.cloudflare.com\\/report\\/v3?s=SvwtFxWcK9plrAYkoXGtEB38%2B1kQBKGgpZ%2BlRV4CesA8ng%2BDKw3JmFdjG0uMlKucH7S7wRns2fpmt0aOFjHB2O6YlZHj40fOSWolkgCyi2%2BKMfTCiIh110IXTw%3D%3D\&quot;}],\&quot;group\&quot;:\&quot;cf-nel\&quot;,\&quot;max_age\&quot;:604800}&quot;
+  ],
+  &quot;NEL&quot;: [
+    &quot;{\&quot;success_fraction\&quot;:0,\&quot;report_to\&quot;:\&quot;cf-nel\&quot;,\&quot;max_age\&quot;:604800}&quot;
+  ],
+  &quot;Vary&quot;: [
+    &quot;Accept-Encoding&quot;
+  ],
+  &quot;Server&quot;: [
+    &quot;cloudflare&quot;
+  ],
+  &quot;CF-RAY&quot;: [
+    &quot;74beef2dd91c3212-BOM&quot;
+  ]
+}
+ 
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref passed">10</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>print responseCookies</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.10">09:30:20.321 [print] null 
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
