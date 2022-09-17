@@ -3,6 +3,7 @@ Feature: Post Example
   Background: 
     * url 'https://reqres.in/api'
     * header Accept = 'application/json'
+    * def expectedOutput = read("response1.json")
 
   #Simple post request
   Scenario: Post Data - Demo 1
@@ -44,8 +45,7 @@ Feature: Post Example
     Then status 201
     And match response == {"name": "Mohammad","job": "teacher","id": "#string","createdAt": "#ignore"}
     And print response
-    
-    #Post with read response from file
-     Scenario: Post Data - Demo 5
+
+  #Post with read response from file
+  Scenario: Post Data - Demo 5
     Given path '/users'
-    
