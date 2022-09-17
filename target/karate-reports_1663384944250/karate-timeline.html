@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/test\/BackgroundAndPath[1:7]","start":1663384878799,"end":1663384879292,"title":"src\/test\/java\/test\/BackgroundAndPath[1:7] 08:51:18.799-08:51:19.292 Background Example"},{"id":2,"group":1,"content":"src\/test\/java\/test\/BackgroundAndPath[2:17]","start":1663384879296,"end":1663384879346,"title":"src\/test\/java\/test\/BackgroundAndPath[2:17] 08:51:19.296-08:51:19.346 Background Example with Param"},{"id":3,"group":1,"content":"src\/test\/java\/test\/BackgroundAndPath[3:23]","start":1663384879348,"end":1663384879425,"title":"src\/test\/java\/test\/BackgroundAndPath[3:23] 08:51:19.348-08:51:19.425 Background Example with Param and match"},{"id":4,"group":1,"content":"src\/test\/java\/test\/BackgroundAndPath[4:31]","start":1663384879427,"end":1663384879468,"title":"src\/test\/java\/test\/BackgroundAndPath[4:31] 08:51:19.427-08:51:19.468 Background Example with Param and match and assertion"},{"id":5,"group":1,"content":"src\/test\/java\/test\/BackgroundAndPath[5:40]","start":1663384879471,"end":1663384879509,"title":"src\/test\/java\/test\/BackgroundAndPath[5:40] 08:51:19.471-08:51:19.509 Background Example with print fields"},{"id":6,"group":1,"content":"src\/test\/java\/test\/BackgroundAndPath[6:49]","start":1663384879511,"end":1663384879553,"title":"src\/test\/java\/test\/BackgroundAndPath[6:49] 08:51:19.511-08:51:19.553 Background Example with assert for particular field value"},{"id":7,"group":1,"content":"src\/test\/java\/test\/BackgroundAndPath[7:58]","start":1663384879556,"end":1663384879594,"title":"src\/test\/java\/test\/BackgroundAndPath[7:58] 08:51:19.556-08:51:19.594 Background Example with assert for particular field value with $ sign"},{"id":8,"group":1,"content":"src\/test\/java\/test\/BackgroundAndPath[8:68]","start":1663384879597,"end":1663384879632,"title":"src\/test\/java\/test\/BackgroundAndPath[8:68] 08:51:19.597-08:51:19.632 Background Example with assert for particular field value with $ sign mixed","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

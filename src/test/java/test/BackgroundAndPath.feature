@@ -64,3 +64,15 @@ Feature: Background and Path examples
     And match response.data[0].first_name == 'George'
     And assert response.data.length == 6
     And match $.data[1].id == 2
+
+  Scenario: Background Example with assert for particular field value with $ sign mixed
+    Given path '/users'
+    And param Page = 2
+    When method GET
+    Then status 200
+    And print response
+    And match response.data[0].first_name == 'George'
+    And assert response.data.length == 6
+    And match $.data[1].id == 2
+    And match $.data[0].email == 'george.bluth@reqres.in'
+    And assert response.data[1].last_name != 'Bluth'
