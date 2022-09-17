@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"test\/GETAPIDemo[1:2]","start":1663387220127,"end":1663387220320,"title":"test\/GETAPIDemo[1:2] 09:30:20.127-09:30:20.320 GET API Response"},{"id":2,"group":1,"content":"test\/post\/PostExample[1:9]","start":1663387220359,"end":1663387220921,"title":"test\/post\/PostExample[1:9] 09:30:20.359-09:30:20.921 Post Data - Demo 1"},{"id":3,"group":1,"content":"test\/post\/PostExample[2:16]","start":1663387220925,"end":1663387221410,"title":"test\/post\/PostExample[2:16] 09:30:20.925-09:30:21.410 Post Data - Demo 2"},{"id":4,"group":1,"content":"test\/post\/PostExample[3:24]","start":1663387221415,"end":1663387221945,"title":"test\/post\/PostExample[3:24] 09:30:21.415-09:30:21.945 Post Data - Demo 3"},{"id":5,"group":1,"content":"test\/post\/PostExample[4:32]","start":1663387221949,"end":1663387222460,"title":"test\/post\/PostExample[4:32] 09:30:21.949-09:30:22.460 Post Data - Demo 4","className":"failed"},{"id":6,"group":1,"content":"test\/post\/PostExample[5:41]","start":1663387222470,"end":1663387223022,"title":"test\/post\/PostExample[5:41] 09:30:22.470-09:30:23.022 Post Data - Demo 5"},{"id":7,"group":1,"content":"test\/post\/PostExample[6:50]","start":1663387223025,"end":1663387223519,"title":"test\/post\/PostExample[6:50] 09:30:23.025-09:30:23.519 Post Data - Demo 5"},{"id":8,"group":1,"content":"test\/FirstTest[1:3]","start":1663387219986,"end":1663387220099,"title":"test\/FirstTest[1:3] 09:30:19.986-09:30:20.099 First Simple API Test"},{"id":9,"group":1,"content":"test\/BackgroundAndPath[1:7]","start":1663387217999,"end":1663387218587,"title":"test\/BackgroundAndPath[1:7] 09:30:17.999-09:30:18.587 Background Example"},{"id":10,"group":1,"content":"test\/BackgroundAndPath[2:17]","start":1663387218592,"end":1663387218731,"title":"test\/BackgroundAndPath[2:17] 09:30:18.592-09:30:18.731 Background Example with Param"},{"id":11,"group":1,"content":"test\/BackgroundAndPath[3:23]","start":1663387218737,"end":1663387218862,"title":"test\/BackgroundAndPath[3:23] 09:30:18.737-09:30:18.862 Background Example with Param and match"},{"id":12,"group":1,"content":"test\/BackgroundAndPath[4:31]","start":1663387218865,"end":1663387219013,"title":"test\/BackgroundAndPath[4:31] 09:30:18.865-09:30:19.013 Background Example with Param and match and assertion"},{"id":13,"group":1,"content":"test\/BackgroundAndPath[5:40]","start":1663387219018,"end":1663387219224,"title":"test\/BackgroundAndPath[5:40] 09:30:19.018-09:30:19.224 Background Example with print fields"},{"id":14,"group":1,"content":"test\/BackgroundAndPath[6:49]","start":1663387219227,"end":1663387219389,"title":"test\/BackgroundAndPath[6:49] 09:30:19.227-09:30:19.389 Background Example with assert for particular field value"},{"id":15,"group":1,"content":"test\/BackgroundAndPath[7:58]","start":1663387219393,"end":1663387219503,"title":"test\/BackgroundAndPath[7:58] 09:30:19.393-09:30:19.503 Background Example with assert for particular field value with $ sign"},{"id":16,"group":1,"content":"test\/BackgroundAndPath[8:68]","start":1663387219506,"end":1663387219618,"title":"test\/BackgroundAndPath[8:68] 09:30:19.506-09:30:19.618 Background Example with assert for particular field value with $ sign mixed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>
