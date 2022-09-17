@@ -26,11 +26,12 @@ Feature: Post Example
     When method POST
     Then status 201
     And print response
-    
-#Background and Assertion with post request
+
+  #Background and Assertion with post request
   Scenario: Post Data - Demo 3
     Given path '/users'
     And request {"name": "Mohammad","job": "teacher"}
     When method POST
     Then status 201
+    And match  {"name": "Mohammad","job": "teacher","id": "583","createdAt": "2022-09-17T03:40:32.355Z"}
     And print response
